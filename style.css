@@ -4,13 +4,24 @@
 }
 
 body {
-  background-color: #31363f;
+  background-color: #102c57;
   text-align: justify;
-  color: #eeeeee;
-  display: flexbox;
+  color: #fefaf6;
   margin: auto;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+body {
+  overflow-y: scroll;
 }
 
 h1 {
@@ -19,7 +30,8 @@ h1 {
 
 h2 {
   text-align: center;
-  color: #76abae;
+  font-size: 32px;
+  color: #eadbc8;
 }
 
 img.profile {
@@ -27,10 +39,33 @@ img.profile {
   width: 250px;
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.large-intro {
+  font-size: 150px;
+  margin-top: 250px;
+  margin-bottom: 500px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  animation-name: fadein;
+  animation-duration: 2s;
+  justify-content: center;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   gap: calc(1vh + 1vw);
+  margin: auto;
 }
 
 .profile-image {
@@ -65,14 +100,13 @@ table,
 th,
 td {
   border-collapse: collapse;
-  border: #76abae 1px solid;
+  border: #fefaf6 1px solid;
   padding: 10px;
-  border-radius: 10px;
   width: 50%;
   margin-left: 25%;
 }
 
 tr.table-header {
-  background-color: #222831;
-  color: #eeeeee;
+  background-color: #eadbc8;
+  color: #102c57;
 }
